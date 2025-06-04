@@ -1,0 +1,99 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow-x: hidden;
+    
+}
+
+.card {
+    padding: 30px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.card::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    z-index: -1;
+    border-radius: 1rem;
+    transform: rotate(-5.5deg);
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.number {
+    background: #ddd;
+    color: #fff;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.number.active {
+    background: black;
+}
+
+.bar {
+    width: 40px;
+    height: 4px;
+    background: #ddd;
+    margin: 0 10px;
+    border-radius: 2px;
+}
+
+.steps .step {
+    display: none;
+}
+
+.steps .step.active {
+    display: block;
+}
+.text-justify{
+    text-align: center;
+}
+.custom-flex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.step-dots {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+a{
+  text-decoration: none !important;
+  color: #000 !important;
+  font-weight: bolder;
+}
+.dot {
+    width: 14px;
+    height: 14px;
+    background-color: #999;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: #000;
+}
