@@ -15,7 +15,7 @@ class ContactSeeder extends Seeder
     public function run(): void
     {
          
-        User::factory(10)->create()->each(function ($user) {
+        User::factory(50)->create()->each(function ($user) {
             Contact::factory()->create([
                 'user_id' => $user->id,
             ]);
